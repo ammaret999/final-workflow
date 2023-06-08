@@ -1,0 +1,29 @@
+name: Docker Build and Publish
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+  DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+  IMAGE_NAME: react-next-app
+  IMAGE_TAG: latest
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Login to Docker Hub
+        run: docker login --username $DOCKERHUB_USERNAME --password $DOCKERHUB_TOKEN
+
+      - name: Build Docker image
+        run: docker build -t $DOCKERHUB_USERNAME/$IMAGE_NAME:$IMAGE_TAG .
+
+      - name: Push Docker image to Docker Hub
+        run: docker push $DOCKERHUB_USERNAME/$IMAGE_NAME:$IMAGE_TAG

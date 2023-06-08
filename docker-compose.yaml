@@ -1,0 +1,7 @@
+version: '1.0'
+services:
+  app:
+    container_name: react-next-app
+    build: ./
+    ports:
+      - "3000:3000"
