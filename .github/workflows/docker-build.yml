@@ -6,8 +6,8 @@ on:
       - main
 
 env:
-  DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-  DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+  DOCKERHUB_USERNAME: ${{ secrets.DOCKER_HUB }}
+  DOCKERHUB_TOKEN: ${{ secrets.DOCKER_HUB }}
   IMAGE_NAME: react-next-app
   IMAGE_TAG: latest
 
