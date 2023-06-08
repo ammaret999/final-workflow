@@ -1,13 +1,11 @@
 name: Docker Build and Publish
-
 on:
   push:
     branches:
       - main
-
 env:
-  DOCKERHUB_USERNAME: "ammaret999"
-  DOCKERHUB_TOKEN: "dckr_pat_oL8taUHSLkvy_9-hr_WkzhAPjb8"
+  DOCKERHUB_USERNAME: ammaret999
+  DOCKERHUB_TOKEN: dckr_pat_oL8taUHSLkvy_9-hr_WkzhAPjb8
   IMAGE_NAME: react-next-app
   IMAGE_TAG: latest
 
@@ -20,7 +18,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Login to Docker Hub
-        run: docker login --username ${{ DOCKERHUB_USERNAME }} --password ${{ DOCKERHUB_TOKEN }}
+        run: docker login --username $DOCKERHUB_USERNAME --password $DOCKERHUB_TOKEN
 
       - name: Build Docker image
         run: docker build -t $DOCKERHUB_USERNAME/$IMAGE_NAME:$IMAGE_TAG .
