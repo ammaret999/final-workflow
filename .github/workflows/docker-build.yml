@@ -7,7 +7,7 @@ env:
   DOCKERHUB_USERNAME: ammaret999
   DOCKERHUB_TOKEN: dckr_pat_oL8taUHSLkvy_9-hr_WkzhAPjb8
   IMAGE_NAME: react-next-app
-  IMAGE_TAG: latest
+  IMAGE_TAG: 1.0
 
 jobs:
   build-and-publish:
