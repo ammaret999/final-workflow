@@ -5,7 +5,7 @@ on:
       - main
 env:
   DOCKERHUB_USERNAME: ammaret999
-  DOCKERHUB_TOKEN: dckr_pat_oL8taUHSLkvy_9-hr_WkzhAPjb8
+  DOCKERHUB_TOKEN: dckr_pat_M-GcpWhwiUQi_gZzBB9e1dDjLsU
   IMAGE_NAME: react-next-app
   IMAGE_TAG: 1.0
 
