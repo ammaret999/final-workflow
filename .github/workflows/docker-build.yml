@@ -7,7 +7,7 @@ env:
   DOCKERHUB_USERNAME: ammaret999
   DOCKERHUB_TOKEN: dckr_pat_M-GcpWhwiUQi_gZzBB9e1dDjLsU
   IMAGE_NAME: final-deploy
-  IMAGE_TAG: 1.1
+  IMAGE_TAG: latest
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
